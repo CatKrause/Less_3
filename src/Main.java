@@ -5,12 +5,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите значение: ");
         int mean = scanner.nextInt();
-        System.out.printf("ваше значение: %d \n", mean);
-//        System.out.printf("ваше новое значение: %d \n", ++mean);
-//        System.out.printf("ваше новое значение: %d \n", --mean);
-//        System.out.printf("ваше новое значение: %d \n", mean * 2);
-//        System.out.printf("ваше новое значение: %d \n", mean / 3);
-        System.out.printf("Ваше первое значение: %d, второе значение: %d, третье значение: %d, четвертое значение: %d", ++mean, --mean, mean * 2, mean / 3);
-       scanner.close();
+        System.out.printf("ваше первое значение: %d \n", mean);
+        scanner.nextLine();
+        System.out.print("Введите второе значение: ");
+        int mean2 = scanner.nextInt();
+        System.out.printf("ваше второе значение: %d \n", mean2);
+
+        System.out.printf("Результат сложения: %d, результат вычитания: %d, результат умножения: %d, результат деления: %d", mean + mean2, mean - mean2, mean * mean2, mean / mean2);
+        scanner.close();
     }
 }
