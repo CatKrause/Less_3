@@ -13,13 +13,13 @@ public class Main {
         int mean2 = scanner.nextInt();
         System.out.println("вам доступен выбор следующих операций: ");
 
-        System.out.println("введите 1 для сложения " + "\ud83d\ude0a");
+        System.out.println("для сложения введите: 1");
 
-        System.out.println("введите 2 для деления " + "\ud83d\ude09");
+        System.out.println("для деления введите: 2");
 
-        System.out.println("введите 3 для умножения " + "\ud83d\ude33");
+        System.out.println("для умножения введите: 3");
 
-        System.out.println("введите 4 для вычитания " + "\ud83d\ude0d");
+        System.out.println("для вычитания введите: 4");
 
         System.out.println("для всего остального была мастеркард " + "\ud83d\udcb3");
 
@@ -42,12 +42,16 @@ public class Main {
         } else {
             System.out.println("Введено некорректное значение" + "\uD83D\uDC7F");
         }
-        System.out.print("Для связи с оператором нажмите звездочку" + '\u2b50');
+        System.out.print("Для связи с оператором нажмите звездочку" + '\u2b50' + ": ");
         char star = scanner.next().charAt(0);
-        if (star == '*') {
-            System.out.println("Оператор еще не умеет отвечать на ваши запросы" + "\uD83D\uDE22");
-        } else {
-            System.out.println("Введено некорректное значение" + "\uD83D\uDC7F");
+
+        switch (star) {
+            case '*':
+                System.out.println("Оператор еще не умеет отвечать на ваши запросы" + "\uD83D\uDE22");
+                break;
+            default:
+                System.out.println("Введено некорректное значение" + "\uD83D\uDC7F");
+                break;
         }
 
         scanner.close();
