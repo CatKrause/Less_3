@@ -42,7 +42,7 @@ public class Calculate {
         } else {
             System.out.println("Введено некорректное значение" + "\uD83D\uDC7F");
         }
-        System.out.print("Для связи с оператором нажмите звездочку" + '\u2b50' + ": ");
+        System.out.print("Для связи с оператором нажмите звездочку" + '\u2b50');
         char star = scanner.next().charAt(0);
 
         switch (star) {
