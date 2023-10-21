@@ -3,7 +3,7 @@ package lesson4;
 
 import java.util.Scanner;
 
-public class Main {
+public class Calculate {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите значение: ");
@@ -31,8 +31,8 @@ public class Main {
             int result = mean + mean2;
             System.out.printf("ваш результат равен: %d \n", result);
         } else if (operation == 2) {
-            int result = mean / mean2;
-            System.out.printf("ваш результат равен: %d \n", result);
+            double result = (double) mean / mean2;
+            System.out.printf("ваш результат равен: %.2f \n", result);
         } else if (operation == 3) {
             int result = mean * mean2;
             System.out.printf("ваш результат равен: %d \n", result);
