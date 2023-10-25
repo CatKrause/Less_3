@@ -4,6 +4,33 @@ package lesson4;
 import java.util.Scanner;
 
 public class Calculate {
+    public static int add(int mean, int mean2) {
+        return mean + mean2;
+    }
+
+    public static int subtract(int mean, int mean2) {
+        return mean - mean2;
+    }
+
+    public static int div(int mean, int mean2) {
+        return mean / mean2;
+    }
+
+    public static int mult(int mean, int mean2) {
+        return mean * mean2;
+    }
+
+    public static void operator(char star) {
+        switch (star) {
+            case '*':
+                System.out.println("Оператор еще не умеет отвечать на ваши запросы" + "\uD83D\uDE22");
+                break;
+            default:
+                System.out.println("Введено некорректное значение" + "\uD83D\uDC7F");
+                break;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите значение: ");
@@ -28,31 +55,23 @@ public class Calculate {
         scanner.nextLine();
 
         if (operation == 1) {
-            int result = mean + mean2;
+            int result = add(mean, mean2);
             System.out.printf("ваш результат равен: %d \n", result);
         } else if (operation == 2) {
-            double result = (double) mean / mean2;
+            double result = div(mean, mean2);
             System.out.printf("ваш результат равен: %.2f \n", result);
         } else if (operation == 3) {
-            int result = mean * mean2;
+            int result = mult(mean, mean2);
             System.out.printf("ваш результат равен: %d \n", result);
         } else if (operation == 4) {
-            int result = mean - mean2;
+            int result = subtract(mean, mean2);
             System.out.printf("ваш результат равен: %d \n", result);
         } else {
             System.out.println("Введено некорректное значение" + "\uD83D\uDC7F");
         }
         System.out.print("Для связи с оператором нажмите звездочку" + '\u2b50');
         char star = scanner.next().charAt(0);
-
-        switch (star) {
-            case '*':
-                System.out.println("Оператор еще не умеет отвечать на ваши запросы" + "\uD83D\uDE22");
-                break;
-            default:
-                System.out.println("Введено некорректное значение" + "\uD83D\uDC7F");
-                break;
-        }
+        operator(star);
 
         scanner.close();
     }
